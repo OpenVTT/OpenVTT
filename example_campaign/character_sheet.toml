@@ -1,0 +1,28 @@
+[[CharacterSheet]]
+type = "header"
+text = "General"
+
+[[CharacterSheet]]
+type = "list"
+name = "race"
+label = "Race"
+elements = ["Dwarf", "Elf", "Human"]
+
+[[CharacterSheet]]
+type = "list"
+name = "class"
+label = "Class"
+elements = ["Paladin", "Rogue", "Wizard"]
+
+[[CharacterSheet]]
+[[CharacterSheet.Entry]]
+type = "entry"
+name = "weapons"
+
+[[CharacterSheet.Entry]]
+type = "text"
+name = "weapon_name"
+
+[[CharacterSheet.Entry]]
+type = "number"
+name = "weapon_damage"

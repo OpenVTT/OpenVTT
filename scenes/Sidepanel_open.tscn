@@ -1,0 +1,122 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Theme.tres" type="Theme" id=2]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.2025, 0.214375, 0.25, 1 )
+
+[node name="Sidepanel" type="PanelContainer"]
+margin_left = 1470.0
+margin_right = 1920.0
+margin_bottom = 1080.0
+rect_min_size = Vector2( 450, 0 )
+custom_styles/panel = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+margin_right = 450.0
+margin_bottom = 1080.0
+custom_constants/margin_right = 20
+custom_constants/margin_top = 20
+custom_constants/margin_left = 20
+custom_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+margin_left = 20.0
+margin_top = 20.0
+margin_right = 430.0
+margin_bottom = 1060.0
+custom_constants/separation = 20
+alignment = 2
+
+[node name="GridContainer" type="GridContainer" parent="MarginContainer/VBoxContainer"]
+margin_right = 410.0
+margin_bottom = 260.0
+custom_constants/vseparation = 20
+custom_constants/hseparation = 20
+columns = 3
+
+[node name="Button" type="Button" parent="MarginContainer/VBoxContainer/GridContainer"]
+margin_right = 120.0
+margin_bottom = 120.0
+rect_min_size = Vector2( 120, 120 )
+focus_mode = 0
+theme = ExtResource( 2 )
+enabled_focus_mode = 0
+text = "Characters"
+
+[node name="Button2" type="Button" parent="MarginContainer/VBoxContainer/GridContainer"]
+margin_left = 140.0
+margin_right = 260.0
+margin_bottom = 120.0
+rect_min_size = Vector2( 120, 120 )
+focus_mode = 0
+theme = ExtResource( 2 )
+enabled_focus_mode = 0
+text = "NPCs"
+
+[node name="Button3" type="Button" parent="MarginContainer/VBoxContainer/GridContainer"]
+margin_left = 280.0
+margin_right = 400.0
+margin_bottom = 120.0
+rect_min_size = Vector2( 120, 120 )
+focus_mode = 0
+theme = ExtResource( 2 )
+enabled_focus_mode = 0
+text = "Encounters"
+
+[node name="Button4" type="Button" parent="MarginContainer/VBoxContainer/GridContainer"]
+margin_top = 140.0
+margin_right = 120.0
+margin_bottom = 260.0
+rect_min_size = Vector2( 120, 120 )
+focus_mode = 0
+theme = ExtResource( 2 )
+enabled_focus_mode = 0
+text = "Story"
+
+[node name="Button5" type="Button" parent="MarginContainer/VBoxContainer/GridContainer"]
+margin_left = 140.0
+margin_top = 140.0
+margin_right = 260.0
+margin_bottom = 260.0
+rect_min_size = Vector2( 120, 120 )
+focus_mode = 0
+theme = ExtResource( 2 )
+enabled_focus_mode = 0
+text = "Maps"
+
+[node name="Button6" type="Button" parent="MarginContainer/VBoxContainer/GridContainer"]
+margin_left = 280.0
+margin_top = 140.0
+margin_right = 400.0
+margin_bottom = 260.0
+rect_min_size = Vector2( 120, 120 )
+focus_mode = 0
+theme = ExtResource( 2 )
+enabled_focus_mode = 0
+text = "Library"
+
+[node name="Chat box" type="RichTextLabel" parent="MarginContainer/VBoxContainer"]
+margin_top = 280.0
+margin_right = 410.0
+margin_bottom = 985.0
+focus_mode = 2
+size_flags_vertical = 3
+theme = ExtResource( 2 )
+bbcode_enabled = true
+bbcode_text = "[b][i]DM:[/i][/b] Roll for initiative!
+[b][i]Player:[/i][/b] Natural 20!!!"
+text = "DM: Roll for initiative!
+Player: Natural 20!!!"
+scroll_following = true
+selection_enabled = true
+
+[node name="Chat input" type="LineEdit" parent="MarginContainer/VBoxContainer"]
+margin_top = 1005.0
+margin_right = 410.0
+margin_bottom = 1040.0
+theme = ExtResource( 2 )
+text = "Hello World!"

@@ -1,0 +1,128 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://fonts/OpenSans-ExtraBold.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://scenes/Menu.cs" type="Script" id=2]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.09, 0.09, 0.09, 0.352941 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 60
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxEmpty" id=3]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_styles/panel = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer"]
+margin_right = 1920.0
+margin_bottom = 1080.0
+alignment = 1
+
+[node name="Save" type="Button" parent="PanelContainer/VBoxContainer"]
+margin_left = 881.0
+margin_top = 197.0
+margin_right = 1039.0
+margin_bottom = 286.0
+focus_mode = 0
+size_flags_horizontal = 4
+custom_fonts/font = SubResource( 2 )
+enabled_focus_mode = 0
+text = "Save"
+flat = true
+
+[node name="Load" type="Button" parent="PanelContainer/VBoxContainer"]
+margin_left = 879.0
+margin_top = 290.0
+margin_right = 1040.0
+margin_bottom = 379.0
+focus_mode = 0
+size_flags_horizontal = 4
+custom_fonts/font = SubResource( 2 )
+enabled_focus_mode = 0
+text = "Load"
+flat = true
+
+[node name="HSeparator" type="HSeparator" parent="PanelContainer/VBoxContainer"]
+margin_top = 383.0
+margin_right = 1920.0
+margin_bottom = 423.0
+custom_styles/separator = SubResource( 3 )
+custom_constants/separation = 40
+
+[node name="Connect" type="Button" parent="PanelContainer/VBoxContainer"]
+margin_left = 827.0
+margin_top = 427.0
+margin_right = 1093.0
+margin_bottom = 516.0
+focus_mode = 0
+size_flags_horizontal = 4
+custom_fonts/font = SubResource( 2 )
+enabled_focus_mode = 0
+text = "Connect"
+flat = true
+
+[node name="Host" type="Button" parent="PanelContainer/VBoxContainer"]
+margin_left = 882.0
+margin_top = 520.0
+margin_right = 1038.0
+margin_bottom = 609.0
+focus_mode = 0
+size_flags_horizontal = 4
+custom_fonts/font = SubResource( 2 )
+enabled_focus_mode = 0
+text = "Host"
+flat = true
+
+[node name="HSeparator3" type="HSeparator" parent="PanelContainer/VBoxContainer"]
+margin_top = 613.0
+margin_right = 1920.0
+margin_bottom = 653.0
+custom_styles/separator = SubResource( 3 )
+custom_constants/separation = 40
+
+[node name="Settings" type="Button" parent="PanelContainer/VBoxContainer"]
+margin_left = 826.0
+margin_top = 657.0
+margin_right = 1094.0
+margin_bottom = 746.0
+focus_mode = 0
+size_flags_horizontal = 4
+custom_fonts/font = SubResource( 2 )
+enabled_focus_mode = 0
+text = "Settings"
+flat = true
+
+[node name="HSeparator2" type="HSeparator" parent="PanelContainer/VBoxContainer"]
+margin_top = 750.0
+margin_right = 1920.0
+margin_bottom = 790.0
+custom_styles/separator = SubResource( 3 )
+custom_constants/separation = 40
+
+[node name="Quit" type="Button" parent="PanelContainer/VBoxContainer"]
+margin_left = 886.0
+margin_top = 794.0
+margin_right = 1034.0
+margin_bottom = 883.0
+focus_mode = 0
+size_flags_horizontal = 4
+custom_fonts/font = SubResource( 2 )
+enabled_focus_mode = 0
+text = "Quit"
+flat = true
+[connection signal="pressed" from="PanelContainer/VBoxContainer/Quit" to="." method="_on_Quit_pressed"]

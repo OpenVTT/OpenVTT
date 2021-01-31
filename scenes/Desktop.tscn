@@ -1,0 +1,41 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://scenes/Desktop.cs" type="Script" id=1]
+[ext_resource path="res://scenes/Sidepanel_open.tscn" type="PackedScene" id=2]
+[ext_resource path="res://fonts/OpenSans-ExtraBold.tres" type="DynamicFont" id=3]
+[ext_resource path="res://scenes/Window.tscn" type="PackedScene" id=5]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Main" type="HBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Background text" type="Label" parent="Main"]
+margin_top = 437.0
+margin_right = 1466.0
+margin_bottom = 642.0
+size_flags_horizontal = 3
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 0.1512, 0.15936, 0.18, 1 )
+text = "OpenVTT"
+align = 1
+
+[node name="Sidepanel" parent="Main" instance=ExtResource( 2 )]
+
+[node name="PanelContainer" parent="." instance=ExtResource( 5 )]
+margin_left = 832.906
+margin_top = 536.878
+margin_right = 1432.91
+margin_bottom = 936.878

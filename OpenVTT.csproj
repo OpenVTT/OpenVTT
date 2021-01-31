@@ -1,0 +1,20 @@
+<Project Sdk="Godot.NET.Sdk/3.2.3">
+  <PropertyGroup>
+    <TargetFramework>net48</TargetFramework>
+    <LangVersion>8</LangVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Jint">
+		<Version>2.11.58 </Version>
+	</PackageReference>
+    <PackageReference Include="Tomlyn">
+		<Version>0.1.2</Version>
+	</PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="example_campaign\assets" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="example_campaign\character_sheet.toml" />
+  </ItemGroup>
+</Project>
